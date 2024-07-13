@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/wafavellaniyil/Desktop/DiabeticClassifier/mlruns/785967012179463560/17aa9e5e87b34cb18aebd4387068045d/artifacts
+end_time: 1720833737300
+entry_point_name: ''
+experiment_id: '785967012179463560'
+lifecycle_stage: active
+run_id: 17aa9e5e87b34cb18aebd4387068045d
+run_name: beautiful-deer-234
+run_uuid: 17aa9e5e87b34cb18aebd4387068045d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1720833733497
+status: 3
+tags: []
+user_id: wafavellaniyil

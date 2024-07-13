@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1720833971399
+current_stage: None
+description: ''
+last_updated_timestamp: 1720833971399
+name: ken_13
+run_id: 2a76fea010d949ebb1f9c88b924cc5c1
+run_link: ''
+source: file:///Users/wafavellaniyil/Desktop/DiabeticClassifier/mlruns/785967012179463560/2a76fea010d949ebb1f9c88b924cc5c1/artifacts/knn_model
+status: READY
+status_message: null
+storage_location: file:///Users/wafavellaniyil/Desktop/DiabeticClassifier/mlruns/785967012179463560/2a76fea010d949ebb1f9c88b924cc5c1/artifacts/knn_model
+user_id: null
+version: 1

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/wafavellaniyil/Desktop/DiabeticClassifier/mlruns/785967012179463560/405c27b665954212aeb488ebbfe2a5d5/artifacts
+end_time: 1720833625443
+entry_point_name: ''
+experiment_id: '785967012179463560'
+lifecycle_stage: active
+run_id: 405c27b665954212aeb488ebbfe2a5d5
+run_name: persistent-panda-937
+run_uuid: 405c27b665954212aeb488ebbfe2a5d5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1720833621818
+status: 3
+tags: []
+user_id: wafavellaniyil

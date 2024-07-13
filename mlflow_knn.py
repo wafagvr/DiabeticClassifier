@@ -3,6 +3,8 @@ import mlflow.sklearn
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, f1_score, precision_score
+from urllib.parse import urlparse
 import sys
 import os
 
@@ -41,14 +43,30 @@ with mlflow.start_run() as run:
     knn = KNeighborsClassifier(n_neighbors=n_neighbors)
     knn.fit(X_train, y_train)
 
-    # Log the model
-    mlflow.sklearn.log_model(knn, "knn_model")
+    # Make predictions
+    y_pred = knn.predict(X_test)
 
     # Evaluate the model
-    accuracy = knn.score(X_test, y_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    f1 = f1_score(y_test, y_pred, average='weighted')  # Use 'weighted' for multi-class classification
+    precision = precision_score(y_test, y_pred, average='weighted')  # Use 'weighted' for multi-class classification
     mlflow.log_metric('accuracy', accuracy)
+    mlflow.log_metric('training_f1_score', f1)
+    mlflow.log_metric('training_precision_score', precision)
 
     print(f'Model accuracy: {accuracy}')
+    print(f'Model F1 Score: {f1}')
+    print(f'Model Precision: {precision}')
+
+    # For remote server only
+    remote_server_uri = "https://dagshub.com/wafagvr/DiabeticClassifier.mlflow"
+    mlflow.set_tracking_uri(remote_server_uri)
+
+    tracking_uri_type = urlparse(mlflow.get_tracking_uri()).scheme
+
+    if tracking_uri_type != "file":
+        # Log the model
+        mlflow.sklearn.log_model(knn, "knn_model", registered_model_name="DiabeticPredModel") #
 
     # Debug: Print run details
     print(f'Run ID: {run.info.run_id}')

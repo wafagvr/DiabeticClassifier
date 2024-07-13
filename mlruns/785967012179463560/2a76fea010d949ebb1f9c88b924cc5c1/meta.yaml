@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/wafavellaniyil/Desktop/DiabeticClassifier/mlruns/785967012179463560/2a76fea010d949ebb1f9c88b924cc5c1/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '785967012179463560'
+lifecycle_stage: active
+run_id: 2a76fea010d949ebb1f9c88b924cc5c1
+run_name: masked-bass-108
+run_uuid: 2a76fea010d949ebb1f9c88b924cc5c1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1720833753111
+status: 1
+tags: []
+user_id: wafavellaniyil
