@@ -8,6 +8,11 @@ from urllib.parse import urlparse
 import sys
 import os
 
+# Set the MLflow tracking URI and credentials
+os.environ['MLFLOW_TRACKING_URI'] = 'https://dagshub.com/wafagvr/DiabeticClassifier.mlflow'
+os.environ['MLFLOW_TRACKING_USERNAME'] = 'wafagvr'
+os.environ['MLFLOW_TRACKING_PASSWORD'] = 'a9b6e673bfe2a02615780ba94d8773baab3d2a7e'
+
 # Set the experiment name
 mlflow.set_experiment("diabetes_experiment")
 
@@ -66,7 +71,7 @@ with mlflow.start_run() as run:
 
     if tracking_uri_type != "file":
         # Log the model
-        mlflow.sklearn.log_model(knn, "knn_model", registered_model_name="DiabeticPredModel") #
+        mlflow.sklearn.log_model(knn, "knn_model", registered_model_name="DiabeticPredModel")
 
     # Debug: Print run details
     print(f'Run ID: {run.info.run_id}')
